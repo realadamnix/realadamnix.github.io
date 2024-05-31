@@ -3,8 +3,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #f0f2f5; /* Light mode background color */
+    color: #333; /* Light mode text color */
+}
+
+.dark-mode {
+    background-color: #121212; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
 }
 
 .container {
@@ -29,14 +34,18 @@ header h1 {
     font-size: 2rem;
 }
 
-
 section {
     padding: 3rem 1.5rem;
     margin: 1.5rem 0;
-    background: #fff;
+    background: #fff; /* Light mode section background color */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+}
+
+.dark-mode section {
+    background: #1e1e1e; /* Dark mode section background color */
+    color: #ffffff; /* Dark mode section text color */
 }
 
 section:hover {
@@ -49,9 +58,17 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
+.dark-mode h2 {
+    color: #ffffff;
+}
+
 p {
     font-size: 1.1rem;
     color: #555;
+}
+
+.dark-mode p {
+    color: #bbbbbb;
 }
 
 ul {
@@ -75,6 +92,10 @@ ul li a:hover {
     color: #6b73ff;
 }
 
+.dark-mode ul li a {
+    color: #6b73ff;
+}
+
 footer {
     text-align: center;
     padding: 0.75rem 0;
@@ -84,4 +105,8 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode footer {
+    background: linear-gradient(135deg, #6b73ff, #000dff);
 }
