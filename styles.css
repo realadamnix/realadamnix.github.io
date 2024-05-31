@@ -44,6 +44,7 @@ nav {
 @media (min-width: 600px) {
     nav {
         flex-direction: row;
+        justify-content: center;
     }
 }
 
@@ -166,6 +167,6 @@ footer {
     }
 
     ul li {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 }
