@@ -1,0 +1,135 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Mac system files
+.DS_Store
+
+# VSCode files
+.vscode/
+
+# Webstorm files
+.idea/
+
+# Temporary files
+tmp/
+temp/
+
+# IDE specific
+*.iml
+*.ipr
+*.iws
+
+# Compiled files
+*.o
+*.so
+*.dll
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Dist directory
+dist/
+build/
+
+# .env file
+.env
+
+# Python specific
+__pycache__/
+*.py[cod]
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.so
+*.dylib
+*.dll
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Sphinx documentation
+docs/_build/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# PyCharm
+.idea/
+.pydevproject
