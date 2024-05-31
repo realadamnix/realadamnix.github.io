@@ -10,4 +10,3 @@ https://realadamnix.github.io/
 ## Contact
 
 You can reach me at [adamnix2004@gmail.com](mailto:adamnix2004@gmail.com).
-
