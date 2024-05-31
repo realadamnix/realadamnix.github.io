@@ -1,15 +1,15 @@
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5; /* Light mode background color */
-    color: #333; /* Light mode text color */
+    line-height: 2em;
+    margin: 0.1em;
+    padding: 5em;
+    background-color: #f0f2f5; 
+    color: #333; 
 }
 
 .dark-mode {
-    background-color: #121212; /* Dark mode background color */
-    color: #ffffff; /* Dark mode text color */
+    background-color: #121212; 
+    color: #ffffff; 
 }
 
 .container {
@@ -37,19 +37,19 @@ header h1 {
 section {
     padding: 3rem 1.5rem;
     margin: 1.5rem 0;
-    background: #fff; /* Light mode section background color */
+    background: #fff; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .dark-mode section {
-    background: #1e1e1e; /* Dark mode section background color */
-    color: #ffffff; /* Dark mode section text color */
+    background: #1e1e1e; 
+    color: #ffffff; 
 }
 
 section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); 
 }
 
 h2 {
