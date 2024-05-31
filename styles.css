@@ -36,16 +36,14 @@ header h1 {
 
 nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically, if necessary */
     gap: 1rem;
 }
 
-@media (min-width: 600px) {
-    nav {
-        flex-direction: row;
-        justify-content: center;
-    }
+#dark-mode-toggle {
+    display: block;
+    margin: 0 auto; /* Center the button horizontally within its flex container */
 }
 
 section {
@@ -150,10 +148,10 @@ footer {
 
 @media (max-width: 600px) {
     body {
-        padding: 0.1rem; /* Smaller padding for mobile devices */
+        padding: 0.5rem; /* Smaller padding for mobile devices */
     }
 
-    section { 
+    section {
         padding: 0.5rem;
         margin: 0.5rem 0;
     }
@@ -167,6 +165,6 @@ footer {
     }
 
     ul li {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
