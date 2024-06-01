@@ -41,8 +41,8 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Hide navbar by default */
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -104,17 +104,45 @@ nav {
     left: 10px;
 }
 
+.dropdown {
+    display: none; /* Initially hide dropdown */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background: #000dff;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown a {
+    padding: 10px;
+    border-top: 1px solid #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown a:first-child {
+    border-top: none;
+}
+
+.dropdown.active {
+    display: flex; /* Show dropdown when active */
+}
+
 @media (max-width: 768px) {
     .navbar {
-        display: flex; /* Show navbar on mobile */
+        display: none; /* Hide navbar on mobile */
     }
 
     .menu-toggle {
         display: block; /* Show menu toggle button on mobile */
     }
 
-    .navbar.active .dropdown {
-        display: flex;
+    .dropdown {
+        display: flex; /* Show dropdown on mobile */
     }
 }
 
@@ -134,6 +162,7 @@ main {
     width: 100%;
     max-width: 800px;
     margin: auto;
+    flex-wrap: wrap; /* Ensure children wrap on small screens */
 }
 
 .welcome-box {
@@ -150,12 +179,24 @@ main {
     font-size: 1.2rem;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    margin: 10px; /* Add margin for spacing */
 }
 
 .welcome-box:hover {
     transform: scale(1.05);
     background-color: #000dff;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .welcome-container {
+        flex-direction: column; /* Stack welcome boxes on top of each other */
+        align-items: center;
+    }
+
+    .welcome-box {
+        width: 80%; /* Adjust width for better appearance on mobile */
+    }
 }
 
 section {
