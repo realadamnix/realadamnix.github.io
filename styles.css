@@ -36,7 +36,6 @@ nav {
     position: relative;
 }
 
-/* Navigation Styles */
 .navbar {
     list-style: none;
     padding: 0;
@@ -47,7 +46,7 @@ nav {
 }
 
 .navbar li {
-    position: relative;
+    display: inline;
 }
 
 .navbar a {
@@ -64,7 +63,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Dropdown Menu */
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -75,55 +74,45 @@ nav {
     font-size: 1rem;
     border: none;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
 }
 
 .dropdown {
-    display: none; /* Initially hide dropdown */
+    display: none;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
     background: #000dff;
     border-radius: 5px;
-    width: 100%;
+    width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    max-height: 0;
-}
-
-.dropdown.active {
-    display: flex; /* Show dropdown when active */
-    max-height: 500px; /* Adjust max-height as needed */
 }
 
 .dropdown a {
-    padding: 15px;
+    padding: 10px;
     border-top: 1px solid #fff;
     width: 100%;
     text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background-color: #000dff;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown a:first-child {
     border-top: none;
 }
 
-.dropdown a:hover {
-    background-color: #fff;
-    color: #000dff;
-}
-
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Hide navbar on mobile */
+        display: none;
     }
 
     .menu-toggle {
-        display: block; /* Show menu toggle button on mobile */
+        display: block;
+    }
+
+    .dropdown.active {
+        display: flex;
     }
 }
 
@@ -143,7 +132,6 @@ main {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    flex-wrap: wrap; /* Ensure children wrap on small screens */
 }
 
 .welcome-box {
@@ -160,24 +148,12 @@ main {
     font-size: 1.2rem;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    margin: 10px; /* Add margin for spacing */
 }
 
 .welcome-box:hover {
     transform: scale(1.05);
     background-color: #000dff;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .welcome-container {
-        flex-direction: column; /* Stack welcome boxes on top of each other */
-        align-items: center;
-    }
-
-    .welcome-box {
-        width: 80%; /* Adjust width for better appearance on mobile */
-    }
 }
 
 section {
