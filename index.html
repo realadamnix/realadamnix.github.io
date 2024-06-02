@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam's Portfolio</title>
+    <title>About Me & Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Adam's Portfolio</h1>  
+        <h1>About Me</h1>
+        <nav>
+            <button class="menu-toggle" onclick="document.querySelector('.dropdown').classList.toggle('active')">Menu</button>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="dropdown">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
     </header>
     <main>
-        <div class="welcome-container">
-            <a href="about.html" class="welcome-box">About Me</a>
-            <a href="projects.html" class="welcome-box">My Projects</a>
-            <a href="contact.html" class="welcome-box">Contact </a>
-        </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Adam, a Computer Networking student at TUS in Limerick. This website serves as a platform to display my work and connect with others.</p>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Adam Nix</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+        <p>&copy; 2024 Adam N
