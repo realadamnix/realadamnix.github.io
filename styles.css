@@ -136,6 +136,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 0 1rem; /* Add equal padding on both sides */
+    }
+
     .navbar {
         display: none;
     }
@@ -150,13 +154,17 @@ nav {
 
     .welcome-container {
         flex-direction: column;
+        align-items: center; /* Center the welcome boxes */
     }
 
     .welcome-box {
         width: 100%;
         max-width: 400px;
         margin-bottom: 1rem;
+        margin-right: 0;
+        margin-left: 0;
     }
+
 }
 
 main {
