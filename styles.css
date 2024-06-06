@@ -243,7 +243,7 @@ main.dark-mode {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     max-width: 800px;
     margin: auto;
     flex-wrap: wrap;
