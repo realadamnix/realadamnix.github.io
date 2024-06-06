@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
-    const dropdown = document.querySelector('.dropdown');
+    const navbar = document.querySelector('.navbar');
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
@@ -8,12 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const userPreference = localStorage.getItem('darkModePreference');
     if (userPreference === 'dark') {
         enableDarkMode();
-    } else if (userPreference === 'light') {
-        disableDarkMode();
     }
 
     menuToggle.addEventListener('click', () => {
-        dropdown.classList.toggle('active');
+        navbar.classList.toggle('active');
     });
 
     darkModeToggle.addEventListener('click', () => {
@@ -31,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('footer').classList.add('dark-mode');
         document.querySelectorAll('.welcome-box').forEach(box => box.classList.add('dark-mode'));
         document.querySelectorAll('section').forEach(section => section.classList.add('dark-mode'));
-
-        // Store the user's preference in localStorage
+        document.querySelectorAll('.navbar a').forEach(link => link.classList.add('dark-mode'));
+        document.querySelector('.menu-toggle').classList.add('dark-mode');
         localStorage.setItem('darkModePreference', 'dark');
     }
 
@@ -43,13 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('footer').classList.remove('dark-mode');
         document.querySelectorAll('.welcome-box').forEach(box => box.classList.remove('dark-mode'));
         document.querySelectorAll('section').forEach(section => section.classList.remove('dark-mode'));
-
-        // Store the user's preference in localStorage
-        localStorage.setItem('darkModePreference', 'light');
-    }
-
-    // Add code to enable dark mode on page load if the user preference is not set to light
-    if (userPreference !== 'light' && userPreference !== 'dark') {
-        localStorage.setItem('darkModePreference', 'light'); // Set default to light mode
+        document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('dark-mode'));
+        document.querySelector('.menu-toggle').classList.remove('dark-mode');
+        localStorage.removeItem('darkModePreference');
     }
 });

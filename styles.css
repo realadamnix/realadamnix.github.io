@@ -5,8 +5,8 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #000; /* Set background to black */
-    color: #333;
+    background-color: #6889b4; /* Set background to off-white */
+    color: #000; /* Default color set to black */
     transition: background-color 0.3s, color 0.3s;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -131,11 +131,11 @@ nav {
     }
 
     .navbar {
-        display: none;
+        display: none; /* Hide the navbar on mobile by default */
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Show the menu toggle button on mobile */
         cursor: pointer;
         background: #000dff;
         padding: 10px;
@@ -151,75 +151,26 @@ nav {
         color: #000dff;
     }
 
-    .dropdown {
-        display: none;
+    .navbar.active {
+        display: flex; /* Show the navbar when active */
         flex-direction: column;
         align-items: center;
+        background: #000dff;
+        width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
-        background: #000dff;
-        border-radius: 5px;
+    }
+
+    .navbar a {
         width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s;
-    }
-
-    .dropdown.dark-mode {
-        background: #6b73ff;
-    }
-
-    .dropdown a {
         padding: 10px;
-        border-top: 1px solid #fff;
-        width: 100%;
         text-align: center;
     }
 
-    .dropdown a:first-child {
-        border-top: none;
-    }
-
-    .dropdown a.dark-mode {
+    .navbar a.dark-mode {
         color: #bbb;
         border-top: 1px solid #444;
-    }
-
-    .dropdown.active {
-        display: flex;
-    }
-
-    .welcome-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1rem;
-        margin-right: auto;
-        margin-left: auto;
-        gap: 20px;
-    }
-
-    .welcome-box {
-        width: 100%;
-        max-width: 300px;
-        margin: 0.5rem 0;
-    }
-
-    main {
-        padding: 0;
-        width: 100%;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    #dark-mode-toggle {
-        margin-top: 0.5rem;
-    }
-
-    .back-to-top {
-        bottom: 10px;
-        right: 10px;
     }
 }
 
@@ -243,7 +194,7 @@ main.dark-mode {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     max-width: 800px;
     margin: auto;
     flex-wrap: wrap;
@@ -256,7 +207,7 @@ main.dark-mode {
     align-items: center;
     width: 200px;
     height: 200px;
-    background: #ccc; /* Set welcome box to gray */
+    background: #fff; /* Set welcome box to white */
     border: 2px solid #000dff;
     border-radius: 10px;
     text-decoration: none;
@@ -303,6 +254,7 @@ footer {
     width: 100%;
     flex-shrink: 0;
     transition: background 0.3s, color 0.3s;
+    margin-top: auto;
 }
 
 footer.dark-mode {
