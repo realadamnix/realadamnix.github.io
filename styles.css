@@ -9,6 +9,7 @@ html, body {
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 html.dark-mode, body.dark-mode {
@@ -20,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 2rem;
+    padding: 0 2rem 0 0; /* Remove padding from the right */
 }
 
 /* Header */
@@ -224,11 +225,23 @@ main {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s, color 0.3s;
+    position: relative; /* Ensure main content stays within its bounds */
 }
 
 main.dark-mode {
     background-color: #121212;
     color: #ffffff;
+}
+
+main::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px; /* Adjust as needed */
+    height: 100%;
+    background-color: #000; /* Black margin on the right */
 }
 
 .welcome-container {
