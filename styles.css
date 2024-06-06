@@ -7,28 +7,33 @@ html, body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+
+html.dark-mode, body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 0 2rem;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
+/* Header */
 header {
     background: linear-gradient(135deg, #6b73ff, #000dff);
     color: #fff;
-    padding: 1.5rem 0;
+    padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s, color 0.3s;
 }
 
 header.dark-mode {
@@ -38,9 +43,36 @@ header.dark-mode {
 header h1 {
     margin: 0;
     font-size: 2rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
+#dark-mode-toggle {
+    background-color: #000dff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #6b73ff;
+}
+
+#dark-mode-toggle.dark-mode {
+    background-color: #6b73ff;
+    color: #000dff;
+}
+
+#dark-mode-toggle.dark-mode:hover {
+    background-color: #000dff;
+    color: #fff;
+}
+
+/* Navigation */
 nav {
     margin-top: 10px;
     position: relative;
@@ -92,9 +124,7 @@ nav {
     color: #fff;
     font-size: 1rem;
     border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 .menu-toggle.dark-mode {
@@ -111,8 +141,9 @@ nav {
     left: 0;
     background: #000dff;
     border-radius: 5px;
-    width: 200px;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
 }
 
 .dropdown.dark-mode {
@@ -135,9 +166,14 @@ nav {
     border-top: 1px solid #444;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     body {
-        padding: 0 1rem; /* Add equal padding on both sides */
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1rem 0.5rem;
     }
 
     .navbar {
@@ -154,19 +190,32 @@ nav {
 
     .welcome-container {
         flex-direction: column;
-        align-items: center; /* Center the welcome boxes */
+        align-items: center;
+        padding: 0 1rem;
+        gap: 20px;
     }
 
     .welcome-box {
         width: 100%;
-        max-width: 400px;
-        margin-bottom: 1rem;
-        margin-right: 0;
-        margin-left: 0;
+        max-width: 300px;
+        margin: 1rem 0;
     }
 
+    main {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #dark-mode-toggle {
+        margin-top: 0.5rem;
+    }
 }
 
+/* Main Content */
 main {
     flex: 1;
     padding: 2rem;
@@ -174,6 +223,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main.dark-mode {
@@ -183,11 +233,13 @@ main.dark-mode {
 
 .welcome-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 800px;
     margin: auto;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .welcome-box {
@@ -218,12 +270,14 @@ main.dark-mode {
     color: #fff;
 }
 
+/* Sections */
 section {
     padding: 2rem 1rem;
     margin: 1rem 0;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 section.dark-mode {
@@ -231,6 +285,7 @@ section.dark-mode {
     color: #fff;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
@@ -239,12 +294,14 @@ footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     flex-shrink: 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 footer.dark-mode {
     background: linear-gradient(135deg, #000dff, #6b73ff);
 }
 
+/* Buttons */
 button {
     background-color: #000dff;
     color: #fff;
@@ -253,7 +310,7 @@ button {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
@@ -282,7 +339,7 @@ button.dark-mode:hover {
     border-radius: 5px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .back-to-top.show {
@@ -310,6 +367,7 @@ button.dark-mode:hover {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
 }
 
 .modal.show {
@@ -322,11 +380,13 @@ button.dark-mode:hover {
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    max-width: 600px;
     border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .modal-content.dark-mode {
