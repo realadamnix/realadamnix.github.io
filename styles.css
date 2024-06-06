@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #000; /* Set background to black */
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     box-sizing: border-box;
@@ -21,7 +21,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 2rem 0 0; /* Remove padding from the right */
+}
+
+/* Container */
+.container {
+    flex: 1;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 1rem; /* Equal padding on both sides */
+    position: relative;
+    text-align: center; /* Center the content */
 }
 
 /* Header */
@@ -115,64 +124,8 @@ nav {
     color: #fff;
 }
 
-/* Mobile Dropdown Menu */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    background: #000dff;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    transition: background 0.3s, color 0.3s;
-}
-
-.menu-toggle.dark-mode {
-    background: #6b73ff;
-    color: #000dff;
-}
-
-.dropdown {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #000dff;
-    border-radius: 5px;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
-}
-
-.dropdown.dark-mode {
-    background: #6b73ff;
-}
-
-.dropdown a {
-    padding: 10px;
-    border-top: 1px solid #fff;
-    width: 100%;
-    text-align: center;
-}
-
-.dropdown a:first-child {
-    border-top: none;
-}
-
-.dropdown a.dark-mode {
-    color: #bbb;
-    border-top: 1px solid #444;
-}
-
-/* Media Queries */
+/* Mobile Specific Styles */
 @media (max-width: 768px) {
-    body {
-        padding: 0 1rem;
-    }
-
     header {
         padding: 1rem 0.5rem;
     }
@@ -183,6 +136,53 @@ nav {
 
     .menu-toggle {
         display: block;
+        cursor: pointer;
+        background: #000dff;
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-toggle.dark-mode {
+        background: #6b73ff;
+        color: #000dff;
+    }
+
+    .dropdown {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #000dff;
+        border-radius: 5px;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s;
+    }
+
+    .dropdown.dark-mode {
+        background: #6b73ff;
+    }
+
+    .dropdown a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown a:first-child {
+        border-top: none;
+    }
+
+    .dropdown a.dark-mode {
+        color: #bbb;
+        border-top: 1px solid #444;
     }
 
     .dropdown.active {
@@ -193,17 +193,19 @@ nav {
         flex-direction: column;
         align-items: center;
         padding: 0 1rem;
+        margin-right: auto;
+        margin-left: auto;
         gap: 20px;
     }
 
     .welcome-box {
         width: 100%;
         max-width: 300px;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     main {
-        padding: 1rem;
+        padding: 0;
         width: 100%;
     }
 
@@ -214,18 +216,22 @@ nav {
     #dark-mode-toggle {
         margin-top: 0.5rem;
     }
+
+    .back-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 /* Main Content */
 main {
     flex: 1;
-    padding: 2rem;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s, color 0.3s;
-    position: relative; /* Ensure main content stays within its bounds */
 }
 
 main.dark-mode {
@@ -233,22 +239,11 @@ main.dark-mode {
     color: #ffffff;
 }
 
-main::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px; /* Adjust as needed */
-    height: 100%;
-    background-color: #000; /* Black margin on the right */
-}
-
 .welcome-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; 
     max-width: 800px;
     margin: auto;
     flex-wrap: wrap;
@@ -261,7 +256,7 @@ main::after {
     align-items: center;
     width: 200px;
     height: 200px;
-    background: #fff;
+    background: #ccc; /* Set welcome box to gray */
     border: 2px solid #000dff;
     border-radius: 10px;
     text-decoration: none;
@@ -272,7 +267,7 @@ main::after {
 }
 
 .welcome-box.dark-mode {
-    background: #333;
+    background: #555; /* Dark gray for dark mode */
     color: #fff;
     border: 2px solid #6b73ff;
 }
