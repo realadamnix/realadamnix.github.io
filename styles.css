@@ -5,11 +5,11 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #6889b4; /* Set background to off-white */
-    color: #000; /* Default color set to black */
+    background-color: #6889b4;
+    color: #000;
     transition: background-color 0.3s, color 0.3s;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 html.dark-mode, body.dark-mode {
@@ -26,11 +26,11 @@ body {
 /* Container */
 .container {
     flex: 1;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem; /* Equal padding on both sides */
+    padding: 0 1rem;
     position: relative;
-    text-align: center; /* Center the content */
+    text-align: center;
 }
 
 /* Header */
@@ -126,10 +126,6 @@ nav {
 
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
-    header {
-        padding: 1rem 0.5rem;
-    }
-
     .navbar {
         display: none; /* Hide the navbar on mobile by default */
     }
@@ -174,6 +170,12 @@ nav {
     }
 }
 
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button on larger screens */
+    }
+}
+
 /* Main Content */
 main {
     flex: 1;
@@ -207,7 +209,7 @@ main.dark-mode {
     align-items: center;
     width: 200px;
     height: 200px;
-    background: #fff; /* Set welcome box to white */
+    background: #fff;
     border: 2px solid #000dff;
     border-radius: 10px;
     text-decoration: none;
@@ -218,7 +220,7 @@ main.dark-mode {
 }
 
 .welcome-box.dark-mode {
-    background: #555; /* Dark gray for dark mode */
+    background: #555;
     color: #fff;
     border: 2px solid #6b73ff;
 }
