@@ -1,3 +1,4 @@
+
 /* General Styles */
 html, body {
     height: 100%;
@@ -178,6 +179,7 @@ nav {
         padding: 10px; /* Ensure padding for touch targets */
         text-align: center;
         color: #fff;
+        box-sizing: border-box;
         text-decoration: none;
         border-bottom: 1px solid #fff;
         margin: 0; /* Ensure no margin */
