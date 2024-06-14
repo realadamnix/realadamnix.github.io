@@ -133,6 +133,7 @@ nav {
         padding: 0; /* Ensure no padding */
         margin: 0; /* Ensure no margin */
         list-style: none; /* Remove default list styling */
+        position: absolute;
     }
 
     .menu-toggle {
@@ -154,17 +155,17 @@ nav {
 
     
     .navbar.active {
-        display: flex; /* Show the navbar when active */
+        display: block; /* Show the navbar when active */
         align-items: center;
         background: #000dff;
         width: 50%;
         position: absolute;
         top: 50px;
-        left: 0;
-        border: 2px solid #fff; /* Add border around the navbar */
+        border: 2px solid #ffffff; /* Add border around the navbar */
         border-radius: 8px;
-        padding: 0; /* Ensure no padding */
-        margin: 0; /* Ensure no margin */
+        padding
+        
+
     }
 
     .navbar li {
