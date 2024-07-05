@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Projects</h1>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <ul>
-                <li><a href="https://github.com/realadamnix/learn-python" target="_blank">learn-python</a> - Showcase of my Python programs.</li>
-                <li><a href="https://github.com/realadamnix/learn-cplusplus" target="_blank">learn-cplusplus</a> - Showcase of my C++ programs.</li>
-                <li><a href="https://github.com/realadamnix/java-programs" target="_blank">java-programs</a> - Showcase of my Java programs.</li>
-            </ul>  
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Adam Nix</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <h1>Projects</h1>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome-container">
+      <div class="welcome-box">
+        <a href="https://github.com/realadamnix/learn-python" class="welcome-box">
+          <img src="Python.png" alt="learn-python" style="width: 40px; height: 40px;">
+          <h2>Showcase of Python Programs</h2>
+        </a>
+      </div>
+      <div class="welcome-box">
+        <a href="https://github.com/realadamnix/learn-cplusplus" class="welcome-box">
+          <img src="CPP.png" alt="learn-cplusplus" style="width: 40px; height: 40px;">
+          <h2>Showcase of C++ Programs</h2>
+        </a>
+      </div>
+      <div class="welcome-box">
+        <a href="https://github.com/realadamnix/java-programs" class="welcome-box" >
+          <img src="Java.png" alt="java-programs" style="width: 40px; height: 45px;">
+          <h2>Showcase of Java Programs</h2>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Adam Nix</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

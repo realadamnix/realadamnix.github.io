@@ -1,4 +1,3 @@
-
 /* General Styles */
 html, body {
     height: 100%;
@@ -17,14 +16,14 @@ html.dark-mode, body.dark-mode {
     color: #ffffff;
 }
 
-body {
+body { /* Add padding to the top of the body to account for the fixed header */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 /* Container */
-.container {
+.container { /* Container styles */
     flex: 1;
     max-width: 1200px;
     margin: 0 auto;
@@ -39,18 +38,18 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow to the header */
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: background 0.3s, color 0.3s;
 }
 
-header.dark-mode {
+header.dark-mode { /* Dark mode styles */
     background: linear-gradient(135deg, #000dff, #6b73ff);
 }
 
-header h1 {
+header h1 { /* Header h1 styles */
     margin: 0;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -77,7 +76,7 @@ header h1 {
     color: #000dff;
 }
 
-#dark-mode-toggle.dark-mode:hover {
+#dark-mode-toggle.dark-mode:hover { /* Dark mode styles */
     background-color: #000dff;
     color: #fff;
 }
@@ -85,19 +84,19 @@ header h1 {
 /* Navigation */
 nav {
     margin-top: 10px;
-    position: relative;
+    position: relative; /* Position the navbar relative to the container */
 }
 
 .navbar {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    padding: 0; 
+    margin: 0;  
+    display: flex; 
     justify-content: center;
     gap: 20px;
 }
 
-.navbar li {
+.navbar li { /* List item styles */
     display: inline;
 }
 
@@ -163,9 +162,6 @@ nav {
         top: 50px;
         border: 2px solid #ffffff; /* Add border around the navbar */
         border-radius: 8px;
-      
-            
-    
     }
 
     .navbar li {
@@ -218,8 +214,7 @@ main.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
-
-.welcome-container {
+.welcome-container { /* Container for the welcome boxes */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,20 +232,27 @@ main.dark-mode {
     width: 200px;
     height: 200px;
     background: #fff;
-    border: 2px solid #000dff;
+    border: 2px solid #000dff; /* Ensure consistent border size and color */
     border-radius: 10px;
     text-decoration: none;
     color: #000dff;
     font-size: 1.2rem;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    position: relative;
 }
 
 .welcome-box.dark-mode {
     background: #555;
     color: #fff;
-    border: 2px solid #6b73ff;
+    border: 2px solid #6b73ff; /* Dark mode border */
 }
+
+.welcome-box img {
+    position: absolute; /* Position images relative to the box */
+    top: -1em; 
+    left: 4em; 
+  }
 
 .welcome-box:hover {
     transform: scale(1.05);
@@ -262,9 +264,8 @@ main.dark-mode {
 section {
     padding: 2rem 1rem;
     margin: 1rem 0;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -287,7 +288,7 @@ footer {
 }
 
 footer.dark-mode {
-    background: linear-gradient(135deg, #000dff, #6b73ff);
+    background: linear-gradient(135deg, #000dff, #6b73ff); /* Dark mode styles */
 }
 
 /* Buttons */
@@ -316,35 +317,6 @@ button.dark-mode:hover {
     color: #fff;
 }
 
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #000dff;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
-}
-
-.back-to-top.show {
-    opacity: 1;
-}
-
-.back-to-top.dark-mode {
-    background-color: #6b73ff;
-    color: #000dff;
-}
-
-.back-to-top.dark-mode:hover {
-    background-color: #000dff;
-    color: #fff;
-}
-
 /* Modal Styles */
 .modal {
     display: none;
@@ -359,7 +331,7 @@ button.dark-mode:hover {
     transition: background-color 0.3s;
 }
 
-.modal.show {
+.modal.show { /* Show the modal */
     display: block;
 }
 
@@ -367,7 +339,7 @@ button.dark-mode:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.modal-content {
+.modal-content { /* Modal content styles */
     background-color: #fff;
     margin: 10% auto;
     padding: 20px;
@@ -378,13 +350,13 @@ button.dark-mode:hover {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.modal-content.dark-mode {
+.modal-content.dark-mode {  /* Dark mode styles */
     background-color: #333;
     color: #fff;
-    border: 1px solid #bbb;
+    border: 1px solid #bbb; 
 }
 
-.close {
+.close { /* Close button styles */
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -392,18 +364,13 @@ button.dark-mode:hover {
     cursor: pointer;
 }
 
-.close:hover,
+.close:hover, 
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.close.dark-mode {
+.close.dark-mode { 
     color: #bbb;
-}
-
-.close.dark-mode:hover,
-.close.dark-mode:focus {
-    color: #fff;
 }
