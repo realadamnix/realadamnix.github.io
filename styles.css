@@ -31,7 +31,9 @@ body { /* Add padding to the top of the body to account for the fixed header */
     position: relative;
     text-align: center;
 }
-
+a {
+    color: #007bff; /* change the color to blue */
+  }
 /* Header */
 header {
     background: linear-gradient(135deg, #6b73ff, #000dff);
