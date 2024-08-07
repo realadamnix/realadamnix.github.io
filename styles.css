@@ -352,6 +352,39 @@ button.dark-mode:hover {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Instagram Section */
+.instagram-section {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.instagram-section.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+.instagram-widget {
+    margin: 20px auto;
+    max-width: 320px;
+}
+
+.instagram-section a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.instagram-section a:hover {
+    text-decoration: underline;
+}
+
 .modal-content.dark-mode {  /* Dark mode styles */
     background-color: #333;
     color: #fff;
