@@ -5,10 +5,12 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    
     background-color: #6889b4;
     color: #000;
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
+    flex-direction: column;
 }
 
 html.dark-mode, body.dark-mode {
@@ -16,10 +18,16 @@ html.dark-mode, body.dark-mode {
     color: #ffffff;
 }
 
+#about {
+    margin-top: 100px; /* Adjust the value as needed */
+}
+
+
 body { /* Add padding to the top of the body to account for the fixed header */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 /* Container */
@@ -56,6 +64,29 @@ header h1 { /* Header h1 styles */
     font-size: 2rem;
     letter-spacing: 2px;
 }
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 250px;
+}
+
+#logo-text {
+    position: absolute;
+    bottom: 31%; /* Adjust bottom position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #fff;    
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
 
 #dark-mode-toggle {
     background-color: #000dff;
@@ -66,7 +97,7 @@ header h1 { /* Header h1 styles */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-top: 10px;
+    margin-top: 10px;                 
 }
 
 #dark-mode-toggle:hover {
@@ -136,7 +167,9 @@ nav {
         list-style: none; /* Remove default list styling */
         position: absolute;
     }
-
+    #logo-text {
+        bottom: 8%;
+      }
     .menu-toggle {
         display: block; /* Show the menu toggle button on mobile */
         cursor: pointer;
@@ -147,6 +180,10 @@ nav {
         font-size: 1rem;
         border: none;
         transition: background 0.3s, color 0.3s;
+    }
+    
+    body {
+       
     }
 
     .menu-toggle.dark-mode {
@@ -209,8 +246,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 600px; /* Set a fixed height */
     transition: background-color 0.3s, color 0.3s;
+   
 }
+
 
 main.dark-mode {
     background-color: #121212;
@@ -350,39 +391,6 @@ button.dark-mode:hover {
     max-width: 600px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-}
-
-/* Instagram Section */
-.instagram-section {
-    padding: 2rem 1rem;
-    margin: 1rem 0;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.instagram-section.dark-mode {
-    background: #333;
-    color: #fff;
-}
-
-.instagram-widget {
-    margin: 20px auto;
-    max-width: 320px;
-}
-
-.instagram-section a {
-    color: #007bff;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.instagram-section a:hover {
-    text-decoration: underline;
 }
 
 .modal-content.dark-mode {  /* Dark mode styles */
