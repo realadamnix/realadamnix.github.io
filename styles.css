@@ -107,7 +107,7 @@ header h1 {
     color: #fff;
 }
 
-/* Navigation */
+/* Laptop Specific Styles */
 nav {
     margin-top: 10px;
     position: relative;
@@ -149,6 +149,39 @@ nav {
     color: #fff;
 }
 
+
+@media (max-width: 1024px) {
+    #logo {
+        width: 150px;
+    }
+
+    #logo-text {
+        font-size: 2.5rem;
+        bottom: 35%; 
+    }
+}
+
+@media (max-width: 768px) {
+    #logo {
+        width: 120px;
+    }
+
+    #logo-text {
+        font-size: 2rem;
+        bottom: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 100px;
+    }
+
+    #logo-text {
+        font-size: 1.5rem;
+        bottom: 45%; 
+    }
+
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
     nav {
@@ -170,8 +203,10 @@ nav {
     }
 
     #logo-text {
-        bottom: 10%;
+        bottom: 25%;
     }
+    
+  
 
     .menu-toggle {
         display: block;
@@ -227,7 +262,7 @@ nav {
     .navbar li:last-child a {
         border-bottom: none;
     }
-}
+} 
 
 @media (min-width: 769px) {
     .menu-toggle {
@@ -425,9 +460,9 @@ button.dark-mode:hover {
 .close:focus {
     color: #000;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .close.dark-mode {
     color: #bbb;
+}
 }
