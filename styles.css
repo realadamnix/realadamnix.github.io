@@ -107,7 +107,7 @@ header h1 {
     color: #fff;
 }
 
-/* Laptop Specific Styles */
+/* Navigation */
 nav {
     margin-top: 10px;
     position: relative;
@@ -149,41 +149,10 @@ nav {
     color: #fff;
 }
 
+/*Tablet and laptop specific styles*/
 
-@media (max-width: 1024px) {
-    #logo {
-        width: 150px;
-    }
+@media (min-width: 1366px) {
 
-    #logo-text {
-        font-size: 2.5rem;
-        bottom: 35%; 
-    }
-}
-
-@media (max-width: 768px) {
-    #logo {
-        width: 120px;
-    }
-
-    #logo-text {
-        font-size: 2rem;
-        bottom: 40%;
-    }
-}
-
-@media (max-width: 480px) {
-    #logo {
-        width: 100px;
-    }
-
-    #logo-text {
-        font-size: 1.5rem;
-        bottom: 45%; 
-    }
-
-/* Mobile Specific Styles */
-@media (max-width: 768px) {
     nav {
         display: flex;
         justify-content: space-between;
@@ -203,10 +172,8 @@ nav {
     }
 
     #logo-text {
-        bottom: 25%;
+        bottom: 5%;
     }
-    
-  
 
     .menu-toggle {
         display: block;
@@ -262,7 +229,87 @@ nav {
     .navbar li:last-child a {
         border-bottom: none;
     }
-} 
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) { 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px; /* Add margin to create more vertical space */
+        padding-top: 20px; /* Add padding to create space above the navbar */
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+    }
+
+    #logo-text {
+        bottom: 10%;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        background: #000dff;
+        padding: 8px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-toggle.dark-mode {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .navbar.active {
+        display: block;
+        align-items: center;
+        background: #000dff;
+        width: 50%;
+        position: absolute;
+        top: 50px;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+    }
+
+    .navbar li {
+        width: 100%;
+        padding: 10px 0; 
+        margin: 0;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 15px; 
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+    }
+
+    .navbar a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+}
 
 @media (min-width: 769px) {
     .menu-toggle {
@@ -279,8 +326,6 @@ nav {
         flex: 1;
     }
 }
-
-
 
 /* Main Content */
 main {
@@ -460,9 +505,9 @@ button.dark-mode:hover {
 .close:focus {
     color: #000;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .close.dark-mode {
     color: #bbb;
-}
 }
