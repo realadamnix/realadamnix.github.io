@@ -151,7 +151,7 @@ nav {
 
 /*Tablet and laptop specific styles*/
 
-@media (min-width: 1366px) {
+@media (min-width: 769px) {
 
     nav {
         display: flex;
@@ -172,7 +172,7 @@ nav {
     }
 
     #logo-text {
-        bottom: 5%;
+        bottom: 15%;
     }
 
     .menu-toggle {
