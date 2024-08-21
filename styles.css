@@ -152,7 +152,6 @@ nav {
 
 /* laptop specific styles */
 
-
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
@@ -168,8 +167,6 @@ nav {
         flex: 1;
     }
 }
-
-
 
 /* Tablet Specific Styles */
 
@@ -251,7 +248,7 @@ nav {
 }
 
 /* Mobile Specific Styles */
-@media (max-width: 120px) { 
+@media (max-width: 767px) { 
     nav {
         display: fixed;
         justify-content: space-between;
