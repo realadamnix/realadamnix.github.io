@@ -166,6 +166,9 @@ nav {
     .instagram-section, .spotify-section {
         flex: 1;
     }
+    #logo-text {
+        bottom: 10vh;
+    }
 }
 
 /* Tablet Specific Styles */
