@@ -73,7 +73,7 @@ header h1 {
 
 #logo-text {
     position: absolute;
-    bottom: 23%; 
+    bottom: 28%; 
     left: 50%;
     transform: translateX(-50%);
     font-size: 3rem;
@@ -150,10 +150,110 @@ nav {
 }
 
 
-/* Mobile Specific Styles */
-@media (max-width: 1200px) { 
-    nav {
+/* laptop specific styles */
+
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    .media-section {
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .instagram-section, .spotify-section {
+        flex: 1;
+    }
+}
+
+
+
+/* Tablet Specific Styles */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #logo {
+        width: 150px;
+    }
+
+    #logo-text {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        background: #000dff;
+        padding: 8px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-toggle.dark-mode {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .navbar.active {
+        display: block;
+        align-items: center;
+        background: #000dff;
+        width: 50%;
+        position: absolute;
+        top: 50px;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+    }
+
+    .navbar li {
+        width: 100%;
+        padding: 10px 0; 
+        margin: 0;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 15px; 
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+    }
+
+    .navbar a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 120px) { 
+    nav {
+        display: fixed;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px; /* Add margin to create more vertical space */
@@ -161,7 +261,7 @@ nav {
     }
 
     .navbar {
-        display: none;
+        display: fixed;
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -171,7 +271,7 @@ nav {
     }
 
     #logo-text {
-        bottom: 10%;
+        bottom: 20vh;
     }
 
     .menu-toggle {
