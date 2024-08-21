@@ -152,7 +152,7 @@ nav {
 
 /* laptop specific styles */
 
-@media (min-width: 769px) {
+@media (max-width: 769px) {
     .menu-toggle {
         display: none;
     }
