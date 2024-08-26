@@ -149,28 +149,6 @@ nav {
     color: #fff;
 }
 
-
-/* laptop specific styles */
-
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-    .media-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .instagram-section, .spotify-section {
-        flex: 1;
-    }
-    #logo-text {
-        bottom: vh;
-    }
-}
-
 /* Tablet Specific Styles */
 
 @media (max-width: 768px) {
@@ -179,15 +157,16 @@ nav {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Responsive text size */
     }
 
     #logo {
-        width: 150px;
+        width: 40%; /* Relative width to maintain proportions */
+        max-width: 150px; /* Cap the size for larger screens */
     }
 
     #logo-text {
-        font-size: 2rem;
+        font-size: 2rem; /* Responsive text size */
     }
 
     .navbar {
@@ -198,8 +177,8 @@ nav {
         display: block;
         cursor: pointer;
         background: #000dff;
-        padding: 8px;
-        border-radius: 8px;
+        padding: 0.5rem; /* Use rem for consistent spacing */
+        border-radius: 0.5rem; 
         color: #fff;
         font-size: 1rem;
         border: none;
@@ -217,21 +196,21 @@ nav {
         background: #000dff;
         width: 50%;
         position: absolute;
-        top: 50px;
+        top: 3rem; /* Relative to the toggle button size */
         border: 2px solid #ffffff;
-        border-radius: 8px;
+        border-radius: 0.5rem;
     }
 
     .navbar li {
         width: 100%;
-        padding: 10px 0; 
+        padding: 0.625rem 0; /* 10px equivalent */
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 15px; 
+        padding: 0.9375rem; /* 15px equivalent */
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -253,15 +232,14 @@ nav {
 /* Mobile Specific Styles */
 @media (max-width: 767px) { 
     nav {
-        display: fixed;
+        display: flex; /* Fixed should be replaced with flex for proper layout */
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px; /* Add margin to create more vertical space */
-        padding-top: 20px; /* Add padding to create space above the navbar */
+        margin-bottom: 1.25rem; /* 20px equivalent */
+        padding-top: 1.25rem; /* 20px equivalent */
     }
 
     .navbar {
-        display: fixed;
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -271,15 +249,15 @@ nav {
     }
 
     #logo-text {
-        bottom: 20vh;
+        bottom: 20vh; /* Keep this in viewport units */
     }
 
     .menu-toggle {
         display: block;
         cursor: pointer;
         background: #000dff;
-        padding: 8px;
-        border-radius: 8px;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
         color: #fff;
         font-size: 1rem;
         border: none;
@@ -297,21 +275,21 @@ nav {
         background: #000dff;
         width: 50%;
         position: absolute;
-        top: 50px;
+        top: 3rem; /* Same as in the tablet styles */
         border: 2px solid #ffffff;
-        border-radius: 8px;
+        border-radius: 0.5rem;
     }
 
     .navbar li {
         width: 100%;
-        padding: 10px 0; 
+        padding: 0.625rem 0; /* 10px equivalent */
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 15px; 
+        padding: 0.9375rem; /* 15px equivalent */
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -330,21 +308,24 @@ nav {
     }
 }
 
+/* Desktop Specific Styles */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
+    
     .media-section {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 20px;
+        gap: 1.25rem; /* 20px equivalent */
     }
 
     .instagram-section, .spotify-section {
         flex: 1;
     }
 }
+
 
 /* Main Content */
 main {
