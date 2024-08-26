@@ -150,23 +150,21 @@ nav {
 }
 
 /* Tablet Specific Styles */
-
 @media (max-width: 768px) {
     .container {
         padding: 0 2rem;
     }
 
     header h1 {
-        font-size: 1.5rem; /* Responsive text size */
+        font-size: 1.5rem;
     }
 
     #logo {
-        width: 40%; /* Relative width to maintain proportions */
-        max-width: 150px; /* Cap the size for larger screens */
+        width: 150px;
     }
 
     #logo-text {
-        font-size: 2rem; /* Responsive text size */
+        font-size: 2rem;
     }
 
     .navbar {
@@ -177,8 +175,8 @@ nav {
         display: block;
         cursor: pointer;
         background: #000dff;
-        padding: 0.5rem; /* Use rem for consistent spacing */
-        border-radius: 0.5rem; 
+        padding: 8px;
+        border-radius: 8px;
         color: #fff;
         font-size: 1rem;
         border: none;
@@ -196,21 +194,21 @@ nav {
         background: #000dff;
         width: 50%;
         position: absolute;
-        top: 3rem; /* Relative to the toggle button size */
+        top: 50px;
         border: 2px solid #ffffff;
-        border-radius: 0.5rem;
+        border-radius: 8px;
     }
 
     .navbar li {
         width: 100%;
-        padding: 0.625rem 0; /* 10px equivalent */
+        padding: 10px 0; 
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 0.9375rem; /* 15px equivalent */
+        padding: 15px; 
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -232,11 +230,11 @@ nav {
 /* Mobile Specific Styles */
 @media (max-width: 767px) { 
     nav {
-        display: flex; /* Fixed should be replaced with flex for proper layout */
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1.25rem; /* 20px equivalent */
-        padding-top: 1.25rem; /* 20px equivalent */
+        margin-bottom: 20px; 
+        padding-top: 20px; 
     }
 
     .navbar {
@@ -249,15 +247,15 @@ nav {
     }
 
     #logo-text {
-        bottom: 20vh; /* Keep this in viewport units */
+        bottom: 20vh;
     }
 
     .menu-toggle {
         display: block;
         cursor: pointer;
         background: #000dff;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
+        padding: 8px;
+        border-radius: 8px;
         color: #fff;
         font-size: 1rem;
         border: none;
@@ -275,21 +273,21 @@ nav {
         background: #000dff;
         width: 50%;
         position: absolute;
-        top: 3rem; /* Same as in the tablet styles */
+        top: 50px;
         border: 2px solid #ffffff;
-        border-radius: 0.5rem;
+        border-radius: 8px;
     }
 
     .navbar li {
         width: 100%;
-        padding: 0.625rem 0; /* 10px equivalent */
+        padding: 10px 0; 
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 0.9375rem; /* 15px equivalent */
+        padding: 15px; 
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -308,23 +306,45 @@ nav {
     }
 }
 
-/* Desktop Specific Styles */
+/* Laptop & Desktop Specific Styles */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
-    
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    #logo {
+        width: auto;
+        max-width: 200px;
+    }
+
+    #logo-text {
+        font-size: 2.5rem;
+    }
+
     .media-section {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 1.25rem; /* 20px equivalent */
+        gap: 20px;
     }
 
     .instagram-section, .spotify-section {
         flex: 1;
     }
+
+    .content {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
 }
+
 
 
 /* Main Content */
