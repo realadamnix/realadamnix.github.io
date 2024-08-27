@@ -128,7 +128,7 @@ nav {
 
 .navbar a {
     text-decoration: none;
-    color: #fff;
+    color: #0f0808;
     font-weight: bold;
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
@@ -256,7 +256,7 @@ body {
 
     #logo-text {
         bottom: 20vh;
-        font-size: 1.5rem; 
+        font-size: 3rem; 
     }
 
     .menu-toggle {
@@ -353,26 +353,42 @@ body {
         margin-top: 2rem;
     }
 
-    /* Laptop specific styles */
-    @media (min-width: 1024px) {
-        .container {
-            padding: 0 99rem;
-        }
-    
-        header h1 {
-            font-size: 2rem;
-        }
-    
-        .logo-text {
-            width: 200px;
-            top: 50%;
-        }
-    
-        #logo-text {
-            font-size: 3rem;
-        }
+  /* Laptop specific styles */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 9rem;
     }
+
+    header h1 {
+        font-size: 2rem;
     }
+
+    .logo-text {
+        width: 200px;
+        top: 50%;
+    }
+
+    #logo-text {
+        font-size: 3rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem; /* Increased padding for a bigger navbar */
+    }
+
+    .navbar a {
+        padding: 15px 20px; /* Increased padding for bigger navbar links */
+        font-size: 1.2rem; /* Increased font size for better readability */
+    }
+
+    button {
+        padding: 15px 30px; /* Increased padding for bigger buttons */
+        font-size: 1.2rem; /* Increased font size for better readability */
+    }
+}
 
 
 /* Main Content */
@@ -483,8 +499,8 @@ button {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 7rem;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -559,4 +575,5 @@ button.dark-mode:hover {
 
 .close.dark-mode {
     color: #bbb;
+}
 }
