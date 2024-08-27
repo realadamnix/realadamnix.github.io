@@ -236,7 +236,7 @@ body {
 }
 
 /* Mobile Specific Styles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     nav {
         display: flex;
         justify-content: space-between;
@@ -256,7 +256,7 @@ body {
 
     #logo-text {
         bottom: 20vh;
-        font-size: 1.5rem; /* Adjusted to prevent overlap */
+        font-size: 1.5rem; 
     }
 
     .menu-toggle {
@@ -356,62 +356,24 @@ body {
     /* Laptop specific styles */
     @media (min-width: 1024px) {
         .container {
-            padding: 0 4rem;
+            padding: 0 99rem;
         }
-
+    
         header h1 {
             font-size: 2rem;
         }
-
-        #logo {
+    
+        .logo-text {
             width: 200px;
+            top: 50%;
         }
-
+    
         #logo-text {
             font-size: 3rem;
         }
-
-        .navbar {
-            display: flex;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        .navbar li {
-            display: inline;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .navbar a:hover {
-            background-color: #fff;
-            color: #000dff;
-            border-radius: 5px;
-        }
-
-        .navbar a.dark-mode {
-            color: #bbb;
-        }
-
-        .navbar a.dark-mode:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .logo-text {
-            font-size: 3rem;
-            bottom: 4%;
-        }
     }
-}
+    }
+
 
 /* Main Content */
 main {
