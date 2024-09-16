@@ -139,6 +139,11 @@ nav {
     color: #fff;
 }
 
+.media-wrapper {
+    display: flex;
+    gap: 20px; /* Adjust spacing between sections as needed */
+}
+
 /* Tablet Specific Styles */
 @media (max-width: 768px) {
     .container {
