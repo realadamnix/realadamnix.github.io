@@ -157,6 +157,18 @@ nav {
 }
 /* Tablet Specific Styles */
 @media (max-width: 768px) {
+
+    .image-container {
+        width: 100%; /* Ensure the container fills the full width */
+        display: flex; /* Create a flexbox container for easy layout */
+        justify-content: space-between; /* Space images evenly */
+    }
+    
+    .image-container img {
+        max-width: 33%; /* Set a maximum width for each image */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure image fits within its container without stretching */
+    }
     .container {
         padding: 0 2rem;
     }
@@ -340,6 +352,18 @@ nav {
 
     /* Laptop specific styles */
     @media (min-width: 1024px) {
+
+        .image-container {
+            width: 100%; /* Ensure the container fills the full width */
+            display: flex; /* Create a flexbox container for easy layout */
+            justify-content: space-between; /* Space images evenly */
+        }
+        
+        .image-container img {
+            max-width: 33%; /* Set a maximum width for each image */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure image fits within its container without stretching */
+        }
         .container {
             padding: 0 4rem;
         }
