@@ -11,10 +11,6 @@ html, body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    background-image: url('p1.jpg'), url('p2.jpg'), url('p3.jpg');
-    background-size: 100px auto; /* Set a fixed width for the images */
-    background-repeat: no-repeat;
-    background-position: center top, center center, center bottom; /* Position images vertically */
 }
 
 html.dark-mode, body.dark-mode {
@@ -143,32 +139,8 @@ nav {
     color: #fff;
 }
 
-
-.image-container {
-    width: 100%; /* Ensure the container fills the full width */
-    display: flex; /* Create a flexbox container for easy layout */
-    justify-content: space-between; /* Space images evenly */
-}
-
-.image-container img {
-    max-width: 33%; /* Set a maximum width for each image */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure image fits within its container without stretching */
-}
 /* Tablet Specific Styles */
 @media (max-width: 768px) {
-
-    .image-container {
-        width: 100%; /* Ensure the container fills the full width */
-        display: flex; /* Create a flexbox container for easy layout */
-        justify-content: space-between; /* Space images evenly */
-    }
-    
-    .image-container img {
-        max-width: 33%; /* Set a maximum width for each image */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure image fits within its container without stretching */
-    }
     .container {
         padding: 0 2rem;
     }
@@ -352,18 +324,6 @@ nav {
 
     /* Laptop specific styles */
     @media (min-width: 1024px) {
-
-        .image-container {
-            width: 100%; /* Ensure the container fills the full width */
-            display: flex; /* Create a flexbox container for easy layout */
-            justify-content: space-between; /* Space images evenly */
-        }
-        
-        .image-container img {
-            max-width: 33%; /* Set a maximum width for each image */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure image fits within its container without stretching */
-        }
         .container {
             padding: 0 4rem;
         }
