@@ -33,12 +33,12 @@ html.dark-mode, body.dark-mode {
 }
 
 a {
-    color: #007bff; /* change the color to blue */
+    color: #007bff; 
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #6b73ff, #000dff);
+    background: linear-gradient(135deg, #86ce98, #36979e);
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -50,7 +50,7 @@ header {
 }
 
 header.dark-mode {
-    background: linear-gradient(135deg, #000dff, #6b73ff);
+    background: linear-gradient(135deg, #313699, #2e37d6);
 }
 
 header h1 {
