@@ -33,12 +33,12 @@ html.dark-mode, body.dark-mode {
 }
 
 a {
-    color: #007bff; /* change the color to blue */
+    color: #007bff; 
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #6b73ff, #000dff);
+    background: linear-gradient(135deg, #86ce98, #36979e);
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -50,7 +50,7 @@ header {
 }
 
 header.dark-mode {
-    background: linear-gradient(135deg, #000dff, #6b73ff);
+    background: linear-gradient(135deg, #313699, #2e37d6);
 }
 
 header h1 {
@@ -69,6 +69,16 @@ header h1 {
     justify-content: center;
     align-items: center;
     border-radius: 250px;
+}
+
+#logo-text {
+    position: absolute;
+    bottom: 28%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 #dark-mode-toggle {
@@ -139,12 +149,36 @@ nav {
     color: #fff;
 }
 
-.media-wrapper {
-    display: flex;
-    gap: 20px; /* Adjust spacing between sections as needed */
+
+/* laptop specific styles */
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    .media-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .instagram-section, .spotify-section {
+        flex: 1;
+    }
+    
+    #logo-text {
+        font-size: 2rem;
+    }
+
+    #logo {
+        width: 200px;
+       bottom: 40%;
+    }
 }
 
 /* Tablet Specific Styles */
+
 @media (max-width: 768px) {
     .container {
         padding: 0 2rem;
@@ -156,6 +190,10 @@ nav {
 
     #logo {
         width: 150px;
+    }
+
+    #logo-text {
+        font-size: 2rem;
     }
 
     .navbar {
@@ -192,14 +230,14 @@ nav {
 
     .navbar li {
         width: 100%;
-        padding: 10px 0;
+        padding: 10px 0; 
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 15px;
+        padding: 15px; 
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -219,22 +257,27 @@ nav {
 }
 
 /* Mobile Specific Styles */
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
     nav {
-        display: flex;
+        display: fixed;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
-        padding-top: 20px;
+        margin-bottom: 20px; /* Add margin to create more vertical space */
+        padding-top: 20px; /* Add padding to create space above the navbar */
     }
 
     .navbar {
+        display: fixed;
         flex-direction: column;
         width: 100%;
         padding: 0;
         margin: 0;
         list-style: none;
         position: absolute;
+    }
+
+    #logo-text {
+        bottom: 20vh;
     }
 
     .menu-toggle {
@@ -258,7 +301,7 @@ nav {
         display: block;
         align-items: center;
         background: #000dff;
-        width: 100%; /* Adjust width to fit the screen better */
+        width: 50%;
         position: absolute;
         top: 50px;
         border: 2px solid #ffffff;
@@ -267,14 +310,14 @@ nav {
 
     .navbar li {
         width: 100%;
-        padding: 10px 0;
+        padding: 10px 0; 
         margin: 0;
     }
 
     .navbar a {
         display: block;
         width: 100%;
-        padding: 15px;
+        padding: 15px; 
         text-align: center;
         color: #fff;
         box-sizing: border-box;
@@ -297,24 +340,10 @@ nav {
     }
 }
 
-/* Desktop Specific Styles */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
-
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-
-    #logo {
-        width: auto;
-        max-width: 200px;
-    }
-
     .media-section {
         display: flex;
         justify-content: space-between;
@@ -324,61 +353,6 @@ nav {
 
     .instagram-section, .spotify-section {
         flex: 1;
-    }
-
-    .content {
-        padding: 2rem;
-        margin-top: 2rem;
-    }
-
-    /* Laptop specific styles */
-    @media (min-width: 1024px) {
-        .container {
-            padding: 0 4rem;
-        }
-
-        header h1 {
-            font-size: 2rem;
-        }
-
-        #logo {
-            width: 200px;
-        }
-
-        .navbar {
-            display: flex;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        .navbar li {
-            display: inline;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .navbar a:hover {
-            background-color: #fff;
-            color: #000dff;
-            border-radius: 5px;
-        }
-
-        .navbar a.dark-mode {
-            color: #bbb;
-        }
-
-        .navbar a.dark-mode:hover {
-            background-color: #333;
-            color: #fff;
-        }
     }
 }
 
@@ -394,7 +368,6 @@ main {
     height: 85.9em;
     transition: background-color 0.3s, color 0.3s;
 }
-
 /* Rounded Corners */
 .welcome-box,
 section,
