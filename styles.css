@@ -291,6 +291,10 @@ nav {
     .navbar li:last-child a {
         border-bottom: none;
     }
+
+        #cybermap-section {
+            display: none;
+    }
 }
 
 /* Desktop Specific Styles */
