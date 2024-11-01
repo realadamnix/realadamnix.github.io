@@ -38,8 +38,8 @@ a {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #86ce98, #36979e);
-    color: #fff;
+    background: linear-gradient(135deg, #2BC0E4 ,#EAECC6);
+    color: #000000;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,8 @@ header {
 }
 
 header.dark-mode {
-    background: linear-gradient(135deg, #313699, #2e37d6);
+    background: linear-gradient(135deg, #09203F , #537895);
+    color: #ffffff;
 }
 
 header h1 {
@@ -71,18 +72,8 @@ header h1 {
     border-radius: 250px;
 }
 
-#logo-text {
-    position: absolute;
-    bottom: 28%; 
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-}
-
 #dark-mode-toggle {
-    background-color: #000dff;
+    background-color: #1d24b1;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -128,7 +119,7 @@ nav {
 
 .navbar a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
@@ -141,7 +132,7 @@ nav {
 }
 
 .navbar a.dark-mode {
-    color: #bbb;
+    color: #ffffff;
 }
 
 .navbar a.dark-mode:hover {
@@ -335,9 +326,6 @@ nav {
         border-bottom: none;
     }
 
-        #cybermap-section {
-            display: none;
-    }
 }
 
 @media (min-width: 769px) {
@@ -444,8 +432,8 @@ section.dark-mode {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: linear-gradient(135deg, #6b73ff, #000dff);
-    color: #fff;
+    background: linear-gradient(135deg, #2BC0E4, #EAECC6);
+    color: #000000;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     flex-shrink: 0;
@@ -454,7 +442,8 @@ footer {
 }
 
 footer.dark-mode {
-    background: linear-gradient(135deg, #000dff, #6b73ff);
+    background: linear-gradient(135deg, #222674, #000dff, #222674);
+    color: #ffffff;
 }
 
 /* Buttons */
