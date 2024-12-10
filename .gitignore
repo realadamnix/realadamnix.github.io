@@ -133,3 +133,8 @@ target/
 # PyCharm
 .idea/
 .pydevproject
+
+# Ignore private keys
+private-key.pem
+*.pem
+*.key
