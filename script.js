@@ -53,22 +53,30 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('https://ipapi.co/json/')
         .then(res => res.json())
         .then(data => {
+            const payload = {
+                Timestamp: new Date().toISOString(),
+                IP: data.ip
+            };
+
+            console.log('Payload being sent:', payload); 
+
             fetch('https://script.google.com/macros/s/AKfycbwsJFu8cAOqVNFQaX3e3rWdw2k9bxi_OxgVsVslJveahqX9ViZ3mxzbwzJ13kC2qrkptQ/exec?action=visitorData', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    ip: data.ip,
-                    city: data.city,
-                    region: data.region,
-                    country_name: data.country_name
-                })
+                body: JSON.stringify(payload)
             })
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status} ${response.statusText}`);
+                }
+                return response.text();
+            })
             .then(result => console.log('Data sent successfully:', result))
             .catch(error => console.error('Error sending data:', error));
         })
-        .catch(console.error);
+        .catch(error => console.error('Error fetching IP address:', error));
 })();
+
 
 
 
