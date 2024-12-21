@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log('Payload being sent:', payload); // Debugging
 
-            fetch('https://script.google.com/macros/s/AKfycbyl9BBzed3hsiFEFFE5szajBK3PK65F1acfzlJ2C-E7gjssgV6ZZs-HBKv28uhhVD9DUQ/exec?action=visitorData', {
+            fetch('https://script.google.com/macros/s/AKfycby18EaOPhs0YB8kyM-gpU0l5jwiatHMZvvhCXlY1nF19DM-RWjCKCbFiz3s4BUIGF99lA/exec?action=visitorData', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
