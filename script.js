@@ -45,4 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.menu-toggle').classList.remove('dark-mode');
         localStorage.removeItem('darkModePreference');
     }
+    
+
 });
+
+ // Handle form submission
+ const contactForm = document.getElementById('contact-form');
+ contactForm.addEventListener('submit', event => {
+     event.preventDefault();
+     const formData = new FormData(contactForm);
+
+     fetch('https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec', { 
+         method: 'POST',
+         body: formData
+     })
+     .then(() => {
+         window.location.href = 'thankyou.html';
+     })
+     .catch(err => console.error(err));
+ });
+
