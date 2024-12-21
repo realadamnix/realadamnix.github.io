@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 (function trackVisitor() {
-    fetch('https://ipapi.co/json/')
+    fetch('https://ip-api.com/json/')
         .then(res => res.json())
         .then(data => {
             const payload = {
                 Timestamp: new Date().toISOString(),
-                IP: data.ip
+                IP: data.query 
             };
 
             console.log('Payload being sent:', payload); 
 
-            fetch('https://script.google.com/macros/s/AKfycbwsJFu8cAOqVNFQaX3e3rWdw2k9bxi_OxgVsVslJveahqX9ViZ3mxzbwzJ13kC2qrkptQ/exec?action=visitorData', {
+            fetch('https://script.google.com/macros/s/AKfycbyl9BBzed3hsiFEFFE5szajBK3PK65F1acfzlJ2C-E7gjssgV6ZZs-HBKv28uhhVD9DUQ/exec?action=visitorData', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
@@ -69,13 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!response.ok) {
                     throw new Error(`Server error: ${response.status} ${response.statusText}`);
                 }
-                return response.text();
+                return response.json();
             })
             .then(result => console.log('Data sent successfully:', result))
             .catch(error => console.error('Error sending data:', error));
         })
         .catch(error => console.error('Error fetching IP address:', error));
 })();
+
 
 
 
