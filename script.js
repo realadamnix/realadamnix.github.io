@@ -49,6 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+function trackVisitor() {
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        // Adjust your Google Apps Script URL
+        fetch('https://script.google.com/macros/s/AKfycbz7bC2yAbKGizFHtOCWX6X7Rg0Z5JMadK8yn_5u-bNAB-w11Wtq4euMY8B4MF3E3Pvjmg/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ip: data.ip,
+            city: data.city,
+            region: data.region,
+            country: data.country_name
+          })
+        });
+      })
+      .catch(console.error);
+  }
+
  // Handle form submission
  const contactForm = document.getElementById('contact-form');
  contactForm.addEventListener('submit', event => {
