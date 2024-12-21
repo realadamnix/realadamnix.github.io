@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const payload = {
                 Timestamp: new Date().toISOString(),
-                IP: data.ip
+                "IP Address": data.ip
             };
 
             console.log('Payload being sent:', payload); 
