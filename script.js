@@ -50,15 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 (function trackVisitor() {
-    fetch('https://ip-api.com/json/')
+    fetch('https://api.ipify.org?format=json')
         .then(res => res.json())
         .then(data => {
             const payload = {
                 Timestamp: new Date().toISOString(),
-                IP: data.query 
+                IP: data.ip // Adjusted for ipify response
             };
 
-            console.log('Payload being sent:', payload); 
+            console.log('Payload being sent:', payload); // Debugging
 
             fetch('https://script.google.com/macros/s/AKfycbyl9BBzed3hsiFEFFE5szajBK3PK65F1acfzlJ2C-E7gjssgV6ZZs-HBKv28uhhVD9DUQ/exec?action=visitorData', {
                 method: 'POST',
@@ -76,8 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching IP address:', error));
 })();
-
-
 
 
 
