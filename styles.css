@@ -10,16 +10,10 @@ html, body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    background: url('./images/light-background.webp') no-repeat center center fixed;
+    background: #b2cbcc;
     background-size: cover;
 }
 
-
-html.dark-mode, body.dark-mode {
-    background: url('./images/background.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-}
 
 #about {
     margin-top: 100px; 
