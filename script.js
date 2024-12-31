@@ -49,35 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-(function trackVisitor() {
-    fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => {
-            const payload = {
-                Timestamp: new Date().toISOString(),
-                IP: data.ip // Adjusted for ipify response
-            };
-
-            console.log('Payload being sent:', payload); // Debugging
-
-            fetch('https://script.google.com/macros/s/AKfycby18EaOPhs0YB8kyM-gpU0l5jwiatHMZvvhCXlY1nF19DM-RWjCKCbFiz3s4BUIGF99lA/exec?action=visitorData', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Server error: ${response.status} ${response.statusText}`);
-                }
-                return response.json();
-            })
-            .then(result => console.log('Data sent successfully:', result))
-            .catch(error => console.error('Error sending data:', error));
-        })
-        .catch(error => console.error('Error fetching IP address:', error));
-})();
-
-
 
  // Handle form submission
  const contactForm = document.getElementById('contact-form');
