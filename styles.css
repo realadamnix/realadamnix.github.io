@@ -14,11 +14,6 @@ html, body {
     background-size: cover;
 }
 
-
-#about {
-    margin-top: 100px; 
-}
-
 /* Container */
 .container {
     flex: 1;
@@ -32,7 +27,6 @@ html, body {
 a {
     color: #007bff; 
 }
-
 
 /* Header */
 header {
@@ -58,16 +52,20 @@ header h1 {
     letter-spacing: 2px;
 }
 
-#logo {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
+/* New header container styles */
+.header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 250px;
+    padding: 0 20px;
+}
+
+.header-logo {
+    width: 70px;
+    border-radius: 10em;
+    height: auto;
+    margin-left: 20px;
+    
 }
 
 #dark-mode-toggle {
@@ -138,9 +136,98 @@ nav {
     color: #fff;
 }
 
+#contact-info-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e7f1ff;
+    color: #000000; /* Set text color to black for light mode */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info-section.dark-mode {
+    background-color: #2e2a2a;
+    border-color: #5c5c5c;
+    color: #ffffff; /* Set text color to white for dark mode */
+}
+
+
+/* Contact Form Section */
+#contact-form-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e7f1ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#contact-form-section.dark-mode {
+    background-color: #2e2a2a;
+    border-color: #5c5c5c;
+    color: #ffffff;
+   
+}
+
+
+#about{
+
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e7f1ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+
+}
+
+#about.dark-mode{
+
+    background-color: #2e2a2a;
+    border-color: #5c5c5c;
+    color: #ffffff;
+}
+
+
+
+.instagram-section{
+
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e7f1ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-section.dark-mode{
+    background-color: #2e2a2a;
+    border-color: #5c5c5c;
+    color: #ffffff;
+
+}
+
+.spotify-section{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e7f1ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}
+
+.spotify-section.dark-mode{
+
+    background-color: #2e2a2a;
+    border-color: #5c5c5c;
+    color: #ffffff;
+
+}
+
+
+
 
 /* laptop specific styles */
-
 @media (min-width: 769px) {
     .media-section {
         display: flex;
@@ -152,19 +239,9 @@ nav {
     .instagram-section, .spotify-section {
         flex: 1;
     }
-    
-    #logo-text {
-        font-size: 2rem;
-    }
-
-    #logo {
-        width: 200px;
-       bottom: 40%;
-    }
 }
 
 /* Tablet Specific Styles */
-
 @media (max-width: 768px) {
     .container {
         padding: 0 2rem;
@@ -174,12 +251,12 @@ nav {
         font-size: 1.5rem;
     }
 
-    #logo {
-        width: 150px;
+    .header-logo {
+        width: 40px;
     }
 
-    #logo-text {
-        font-size: 2rem;
+    #logo {
+        width: 100px;
     }
 
     .navbar {
@@ -248,8 +325,8 @@ nav {
         display: fixed;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px; /* Add margin to create more vertical space */
-        padding-top: 20px; /* Add padding to create space above the navbar */
+        margin-bottom: 20px;
+        padding-top: 20px;
     }
 
     .navbar {
@@ -265,62 +342,6 @@ nav {
     #logo-text {
         bottom: 20vh;
     }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        background: #000dff;
-        padding: 8px;
-        border-radius: 8px;
-        color: #fff;
-        font-size: 1rem;
-        border: none;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    .menu-toggle.dark-mode {
-        background: #ffffff;
-        color: #000000;
-    }
-
-    .navbar.active {
-        display: block;
-        align-items: center;
-        background: #000dff;
-        width: 50%;
-        position: absolute;
-        top: 50px;
-        border: 2px solid #ffffff;
-        border-radius: 8px;
-    }
-
-    .navbar li {
-        width: 100%;
-        padding: 10px 0; 
-        margin: 0;
-    }
-
-    .navbar a {
-        display: block;
-        width: 100%;
-        padding: 15px; 
-        text-align: center;
-        color: #fff;
-        box-sizing: border-box;
-        text-decoration: none;
-        border-bottom: 1px solid #fff;
-        margin: 0;
-    }
-
-    .navbar a:hover {
-        background-color: #333;
-        color: #fff;
-    }
-
-    .navbar li:last-child a {
-        border-bottom: none;
-    }
-
 }
 
 @media (min-width: 769px) {
@@ -351,17 +372,17 @@ main {
     height: 85.9em;
     transition: background-color 0.3s, color 0.3s;
 }
-/* Rounded Corners */
-.welcome-box,
-section,
-.modal-content {
-    border-radius: 10px;
-}
-
 
 main.dark-mode {
     background-color: #121212;
     color: #ffffff;
+}
+
+/* Updated logo styles */
+#logo {
+    width: 120px;
+    height: auto;
+    margin: 20px 0;
 }
 
 .welcome-container {
@@ -369,58 +390,51 @@ main.dark-mode {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 755px;
     margin: auto;
     flex-wrap: wrap;
     gap: 20px;
+    background-color: #e7f1ff;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+.welcome-container.dark-mode {
+
+    background-color: #2e2a2a;
+}
+    
+
+
 .welcome-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    background: #fff;
-    border: 2px solid #000dff;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #000dff;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    position: relative;
+    .welcome-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        border: 2px solid #000dff;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #000dff;
+        font-size: 1.2rem;
+        text-align: center;
+        transition: transform 0.3s, background-color 0.3s, color 0.3s;
+        padding: 20px 10px;
+    }
+    
 }
 
 .welcome-box.dark-mode {
     background: #555;
     color: #fff;
-    border: 2px solid #6b73ff;
-}
 
-.welcome-box img {
-    position: absolute;
-    top: -1em;
-    left: 4em;
 }
 
 .welcome-box:hover {
     transform: scale(1.05);
     background-color: #000dff;
-    color: #fff;
-}
-
-/* Sections */
-section {
-    padding: 2rem 1rem;
-    margin: 1rem 0;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-section.dark-mode {
-    background: #333;
     color: #fff;
 }
 
@@ -440,88 +454,4 @@ footer {
 footer.dark-mode {
     background: linear-gradient(135deg, #222674, #000dff, #222674);
     color: #ffffff;
-}
-
-/* Buttons */
-button {
-    background-color: #000dff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-    background-color: #6b73ff;
-}
-
-button.dark-mode {
-    background-color: #6b73ff;
-    color: #000dff;
-}
-
-button.dark-mode:hover {
-    background-color: #000dff;
-    color: #fff;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: flex;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s;
-}
-
-.modal.show {
-    display: block;
-}
-
-.modal.dark-mode {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.modal-content.dark-mode {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #bbb;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover, 
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.close.dark-mode {
-    color: #bbb;
 }
