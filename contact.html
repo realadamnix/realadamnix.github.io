@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <header>
-        <div class="header-container">
-            <h1>Contact</h1>
-            <img class="header-logo" src="images/logo.png" alt="logo">
-        </div>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
-            <ul class="navbar">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Adam Nix</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-2">
+                            <button id="dark-mode-toggle" class="btn btn-sm btn-outline-light">
+                                Light Mode
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="contact-info-section">
-            <h2>Contact Information</h2>
-            <p>You can reach me at <a href="mailto:adamnix.contact@gmail.com">adamnix.contact@gmail.com</a></p>
-            <p>Find me on <a href="https://www.linkedin.com/in/adam-nix-48a466253/" target="_blank">LinkedIn</a></p>
-        </section>
 
-        <section id="contact-form-section">
-            <h2>Contact Form</h2>
-            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="return redirectThankYou();">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <main class="container py-5">
+        <h1 class="text-center mb-5">Contact</h1>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Contact Information</h2>
+                        <p>Email me at: adamnix.contact@gmail.com </p>
+                        <a href="mailto:adamnix.contact@gmail.com" class="btn btn-outline-primary mb-2">Email Me</a>
+                        <p>Connect on LinkedIn:</p>
+                        <a href="https://www.linkedin.com/in/adam-nix-48a466253/" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Contact Form</h2>
+                        <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="redirectToThankYou(event)">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
-            
-        </section>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Adam Nix</p>
+
+    <footer class="py-3 text-center">
+        <p class="mb-0">&copy; 2025 Adam Nix. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

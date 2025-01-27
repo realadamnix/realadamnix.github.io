@@ -1,457 +1,117 @@
 /* General Styles */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    background: #b2cbcc;
-    background-size: cover;
-}
-
-/* Container */
-.container {
-    flex: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    position: relative;
-    text-align: center;
-}
-
-a {
-    color: #007bff; 
-}
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #2BC0E4 ,#EAECC6);
-    color: #000000;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s, color 0.3s;
-}
-
-header.dark-mode {
-    background: linear-gradient(135deg, #09203F , #537895);
-    color: #ffffff;
-}
-
-header h1 {
+    background-color: #f8f9fa;
     margin: 0;
-    font-size: 2rem;
-    letter-spacing: 2px;
-}
-
-/* New header container styles */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.header-logo {
-    width: 70px;
-    border-radius: 10em;
-    height: auto;
-    margin-left: 20px;
-    
-}
-
-#dark-mode-toggle {
-    background-color: #1d24b1;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 10px;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #6b73ff;
-}
-
-#dark-mode-toggle.dark-mode {
-    background-color: #6b73ff;
-    color: #000dff;
-}
-
-#dark-mode-toggle.dark-mode:hover {
-    background-color: #000dff;
-    color: #fff;
-}
-
-/* Navigation */
-nav {
-    margin-top: 10px;
-    position: relative;
-}
-
-.navbar {
-    list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    color: #212529;
+    line-height: 1.6;
 }
 
-.navbar li {
-    display: inline;
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.navbar a {
-    text-decoration: none;
-    color: #000000;
+.navbar-brand {
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
 }
-
-.navbar a:hover {
-    background-color: #fff;
-    color: #000dff;
-    border-radius: 5px;
+.navbar-dark .navbar-nav .nav-link {
+    color: #ddd;
+    transition: color 0.3s;
 }
-
-.navbar a.dark-mode {
-    color: #ffffff;
-}
-
-.navbar a.dark-mode:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-#contact-info-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #e7f1ff;
-    color: #000000; /* Set text color to black for light mode */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#contact-info-section.dark-mode {
-    background-color: #2e2a2a;
-    border-color: #5c5c5c;
-    color: #ffffff; /* Set text color to white for dark mode */
-}
-
-
-/* Contact Form Section */
-#contact-form-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #e7f1ff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-#contact-form-section.dark-mode {
-    background-color: #2e2a2a;
-    border-color: #5c5c5c;
-    color: #ffffff;
-   
-}
-
-
-#about{
-
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #e7f1ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-
-}
-
-#about.dark-mode{
-
-    background-color: #2e2a2a;
-    border-color: #5c5c5c;
-    color: #ffffff;
-}
-
-
-
-.instagram-section{
-
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #e7f1ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.instagram-section.dark-mode{
-    background-color: #2e2a2a;
-    border-color: #5c5c5c;
-    color: #ffffff;
-
-}
-
-.spotify-section{
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #e7f1ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-}
-
-.spotify-section.dark-mode{
-
-    background-color: #2e2a2a;
-    border-color: #5c5c5c;
-    color: #ffffff;
-
-}
-
-
-
-
-/* laptop specific styles */
-@media (min-width: 769px) {
-    .media-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .instagram-section, .spotify-section {
-        flex: 1;
-    }
-}
-
-/* Tablet Specific Styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .header-logo {
-        width: 40px;
-    }
-
-    #logo {
-        width: 100px;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        background: #000dff;
-        padding: 8px;
-        border-radius: 8px;
-        color: #fff;
-        font-size: 1rem;
-        border: none;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    .menu-toggle.dark-mode {
-        background: #ffffff;
-        color: #000000;
-    }
-
-    .navbar.active {
-        display: block;
-        align-items: center;
-        background: #000dff;
-        width: 50%;
-        position: absolute;
-        top: 50px;
-        border: 2px solid #ffffff;
-        border-radius: 8px;
-    }
-
-    .navbar li {
-        width: 100%;
-        padding: 10px 0; 
-        margin: 0;
-    }
-
-    .navbar a {
-        display: block;
-        width: 100%;
-        padding: 15px; 
-        text-align: center;
-        color: #fff;
-        box-sizing: border-box;
-        text-decoration: none;
-        border-bottom: 1px solid #fff;
-        margin: 0;
-    }
-
-    .navbar a:hover {
-        background-color: #333;
-        color: #fff;
-    }
-
-    .navbar li:last-child a {
-        border-bottom: none;
-    }
-}
-
-/* Mobile Specific Styles */
-@media (max-width: 767px) { 
-    nav {
-        display: fixed;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    .navbar {
-        display: fixed;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position: absolute;
-    }
-
-    #logo-text {
-        bottom: 20vh;
-    }
-}
-
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-    .media-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .instagram-section, .spotify-section {
-        flex: 1;
-    }
-}
-
-/* Main Content */
-main {
-    flex: 1;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 85.9em;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-main.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Updated logo styles */
-#logo {
-    width: 120px;
-    height: auto;
-    margin: 20px 0;
-}
-
-.welcome-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 755px;
-    margin: auto;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: #e7f1ff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.welcome-container.dark-mode {
-
-    background-color: #2e2a2a;
-}
-    
-
-
-.welcome-box {
-    .welcome-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 200px;
-        height: 200px;
-        background: #fff;
-        border: 2px solid #000dff;
-        border-radius: 10px;
-        text-decoration: none;
-        color: #000dff;
-        font-size: 1.2rem;
-        text-align: center;
-        transition: transform 0.3s, background-color 0.3s, color 0.3s;
-        padding: 20px 10px;
-    }
-    
-}
-
-.welcome-box.dark-mode {
-    background: #555;
-    color: #fff;
-
-}
-
-.welcome-box:hover {
-    transform: scale(1.05);
-    background-color: #000dff;
+.navbar-dark .navbar-nav .nav-link:hover {
     color: #fff;
 }
 
 /* Footer */
 footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
     text-align: center;
-    padding: 1rem 0;
-    background: linear-gradient(135deg, #2BC0E4, #EAECC6);
-    color: #000000;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    flex-shrink: 0;
-    transition: background 0.3s, color 0.3s;
-    margin-top: auto;
+    font-size: 0.9rem;
 }
 
-footer.dark-mode {
-    background: linear-gradient(135deg, #222674, #000dff, #222674);
-    color: #ffffff;
+/* Cards */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.card-text {
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.btn-outline-primary {
+    color: #007bff;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+
+/* Form Styles */
+form .form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+form .form-control {
+    border-radius: 6px;
+}
+form button[type="submit"] {
+    margin-top: 1rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+body.dark-mode .navbar {
+    background-color: #343a40;
+}
+body.dark-mode footer {
+    background-color: #1d2124;
+}
+body.dark-mode .card {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+body.dark-mode .btn-primary {
+    background-color: #0056b3;
+}
+body.dark-mode .btn-outline-primary {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
 }

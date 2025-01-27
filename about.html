@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me & Contact</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <header>
-        <div class="header-container">
-            <h1>About</h1>
-            <img class="header-logo" src="images/logo.png" alt="logo">
-        </div>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
-            <ul class="navbar">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Adam Nix</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-2">
+                            <button id="dark-mode-toggle" class="btn btn-sm btn-outline-light">
+                                Light Mode
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I am Adam, a Computer Networking student at TUS in Limerick. This website serves as a platform to display my work.</p>
-        </section>
-    
-        <div class="media-wrapper">
-            <section class="instagram-section">
-                <h2>Follow Me on Instagram</h2>
-                <div class="instagram-widget">
+
+    <main class="container py-5">
+        <h1 class="text-center mb-5">About Me</h1>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="h4 card-title">Hello!</h2>
+                <p class="card-text">I am Adam, a Computer Networking student at TUS in Limerick. This website serves as a platform to display my work and connect with others.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <p class="card-header">Instagram Feed</p>
                     <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/_adam_nix_/" data-instgrm-version="14"></blockquote>
                     <script async src="//www.instagram.com/embed.js"></script>
                 </div>
-                <a href="https://www.instagram.com/_adam_nix_/" target="_blank">Visit my Instagram</a>
-            </section>
-    
-            <section class="spotify-section">
-                <h2>Song of the Month</h2>     
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1mshGixz5e5ZXIUmeaDnWd?utm_source=generator" width="100%" height="352" title="Song of the Month" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </section>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Song of the Month</h2>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://open.spotify.com/embed/track/1mshGixz5e5ZXIUmeaDnWd?utm_source=generator" title="Spotify Embed" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </main>
-    <footer>
-        <p>&copy; 2024 Adam Nix</p>
+
+    <footer class="py-3 text-center">
+        <p class="mb-0">&copy; 2025 Adam Nix. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

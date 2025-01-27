@@ -5,7 +5,7 @@ Welcome to my personal portfolio website. This site showcases my projects, skill
 ## About
 
 Hello! I am Adam, a Computer Networking student at TUS in Limerick. This website serves as a platform to display my work and connect with others.
-https://realadamnix.github.io/ 
+[https://realadamnix.github.io/](https://realadamnix.github.io/)
 
 ## Contact
 
