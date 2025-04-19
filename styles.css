@@ -314,3 +314,49 @@ body.dark-mode .theme-toggle .toggle-handle {
 .theme-toggle:hover .toggle-handle {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item ul {
+    margin-top: 0.5rem;
+    padding-left: 0;
+}
+
+.timeline-item li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.timeline-item li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item li i {
+    margin-top: 0.25rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.timeline-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p.text-muted {
+    margin-bottom: 0.75rem;
+}
