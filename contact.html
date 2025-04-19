@@ -52,25 +52,36 @@
             <p class="lead mb-4">Let's Connect and Discuss Opportunities</p>
         </section>
 
-        <div class="row g-4">
-            <div class="col-lg-4">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title mb-4">
-                            <i class="bi bi-person-lines-fill me-2"></i>
-                            Contact Details
+                            <i class="bi bi-envelope me-2"></i>
+                            Contact Information
                         </h2>
-                        
-                        <div class="contact-info mb-4">
-                            <p class="mb-2"><i class="bi bi-envelope me-2"></i>Email:</p>
-                            <a href="mailto:adamnix.contact@gmail.com" class="btn btn-outline-primary mb-3 w-100">
-                                adamnix.contact@gmail.com
-                            </a>
+                        <div class="contact-info">
+                            <div class="mb-4">
+                                <h3 class="h5 mb-3">
+                                    <i class="bi bi-envelope me-2"></i>Email
+                                </h3>
+                                <a href="mailto:adamnix.contact@gmail.com" class="btn btn-outline-primary w-100">
+                                    <i class="bi bi-envelope me-2"></i>adamnix.contact@gmail.com
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <h3 class="h5 mb-3">Professional Profiles</h3>
-                        
-                        <div class="d-grid gap-2">
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">
+                            <i class="bi bi-people me-2"></i>
+                            Professional Profiles
+                        </h2>
+                        <div class="d-grid gap-3">
                             <a href="https://www.linkedin.com/in/realadamnix/" target="_blank" class="btn btn-outline-primary">
                                 <i class="bi bi-linkedin me-2"></i>LinkedIn Profile
                             </a>
@@ -81,39 +92,45 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title mb-4">
-                            <i class="bi bi-chat-dots me-2"></i>
-                            Send a Message
-                        </h2>
-                        <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="redirectToThankYou(event)">
-                            <div class="mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title mb-4">
+                    <i class="bi bi-chat-dots me-2"></i>
+                    Send a Message
+                </h2>
+                <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="redirectToThankYou(event)">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="mb-3">
                                 <label for="name" class="form-label">
                                     <i class="bi bi-person me-2"></i>Your Name
                                 </label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
-                            <div class="mb-4">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
                                 <label for="email" class="form-label">
                                     <i class="bi bi-envelope me-2"></i>Your Email
                                 </label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-                            <div class="mb-4">
-                                <label for="message" class="form-label">
-                                    <i class="bi bi-chat-text me-2"></i>Your Message
-                                </label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="bi bi-send me-2"></i>Send Message
-                            </button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label">
+                            <i class="bi bi-chat-text me-2"></i>Your Message
+                        </label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-send me-2"></i>Send Message
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

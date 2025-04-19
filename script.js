@@ -1,3 +1,14 @@
+(function() {
+    // Check system preference immediately
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedPreference = localStorage.getItem('darkModePreference');
+    
+    // Set initial theme based on saved preference or system preference
+    if (savedPreference === 'dark' || (savedPreference === null && prefersDark)) {
+        document.body.classList.add('dark-mode');
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Dark Mode Elements
     const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -17,7 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Dark Mode
     const initializeDarkMode = () => {
         const userPreference = localStorage.getItem('darkModePreference');
-        userPreference === 'dark' ? enableDarkMode() : disableDarkMode();
+        const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (userPreference === null) {
+            // If no saved preference, use system preference
+            systemPreference ? enableDarkMode() : disableDarkMode();
+        } else {
+            // Use saved preference
+            userPreference === 'dark' ? enableDarkMode() : disableDarkMode();
+        }
     };
 
     // Event Listeners
@@ -25,6 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', () => {
             body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
         });
+    });
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('darkModePreference') === null) {
+            e.matches ? enableDarkMode() : disableDarkMode();
+        }
     });
 
     // Initial Setup
