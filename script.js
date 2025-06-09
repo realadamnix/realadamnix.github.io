@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dark Mode Elements
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
+    const yearSpan = document.getElementById('year');
 
     // Dark Mode Functions
     const enableDarkMode = () => {
@@ -55,6 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial Setup
     initializeDarkMode();
+
+    // Update footer year
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
 
 function redirectToThankYou(event) {
