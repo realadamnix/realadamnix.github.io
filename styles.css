@@ -252,22 +252,6 @@ body.dark-mode .card {
     color: var(--text-color);
 }
 
-body.dark-mode .form-control {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-    color: var(--text-color);
-}
-
-body.dark-mode .form-control:focus {
-    background-color: var(--card-bg);
-    border-color: var(--primary-color);
-    color: var(--text-color);
-}
-
-body.dark-mode .form-label {
-    color: var(--text-color);
-}
-
 /* Bootstrap's .text-muted and the CV page's .meta dates use dark grays
    meant for light backgrounds — lighten them so dates stay readable */
 body.dark-mode .text-muted,
@@ -380,20 +364,6 @@ footer {
     padding: 3rem 0;
     text-align: center;
     border-top: 1px solid var(--border-color);
-}
-
-/* Form Styles */
-.form-control {
-    padding: 1rem 1.25rem;
-    border-radius: 12px;
-    border: 2px solid #e5e7eb;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-
-.form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(42, 93, 176, 0.1);
 }
 
 /* Dark Mode Toggle */
