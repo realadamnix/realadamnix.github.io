@@ -102,7 +102,7 @@ function initTerminal() {
         { out: '30    GUEST_WIFI          active    Gi1/0',         d: 250, cls: 't-success' },
         { blank: true, d: 500 },
         { cmd: 'whoami', d: 300 },
-        { out: 'adam — Networking Student  ·  IT Intern @ Dell Technologies', d: 300, cls: 't-warn' },
+        { out: 'adam — Final-Year Networking Student  ·  Former IT Intern @ Dell Technologies', d: 300, cls: 't-warn' },
         { blank: true, d: 100 },
         { done: true },
     ];
